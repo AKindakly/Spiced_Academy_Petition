@@ -1,0 +1,28 @@
+<div class="signaturesBody">
+
+    <img id="petitionLogo" src="/public/petitionLogo.png" alt="" />
+
+    <div class="signaturesPara">
+        <h2>Our Signers so far:</h2>
+    </div>
+
+    <div class="allSignatures">
+        <ul>
+            {{#rows}}
+                <li>
+                    {{#if homepage}}
+                        <a href="{{homepage}}"  target="_blank">
+                                            {{/if}}
+                            <b>{{first_name}}
+                                {{last_name}}
+                            </b></a>
+
+                    {{age}}
+
+                    <a href="/petition/signatures/{{city}}">{{city}}</a></li>
+            {{/rows}}
+        </ul>
+    </div>
+    <a class="backButton" href="/petition">Go Back</a>
+
+</div>

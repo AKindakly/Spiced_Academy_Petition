@@ -1,0 +1,32 @@
+<div class="petitionBody">
+
+    <div class="petitionWelcome">
+        <h2>Hello {{first_name}}, Welcome to the Petition</h2>
+    </div>
+
+    <img src="/public/imgs/rhinoImg.png" alt="" />
+
+    <div class="petitionPara">
+        <p>
+            Rhinos are one of the largest mammals on our planet. They usually
+            have one or two horns on their nose.
+            <br />Many poachers hunt them down for their horns. The horns are
+            being used for making traditional medicine as well as a display of
+            success and wealth.<br />
+            If we don't stop poaching in around two years rhinos will pretty
+            much be extinct. More than 749 rhinos were killed this year.<br />
+            Sign down to make our world a better place</p>
+    </div>
+
+    <form class="petitionForm" action="/petition" method="POST">
+
+        <input id="canvasImg" type="hidden" name="signature" />
+        <canvas id="canvas" width="405" height="200">
+        </canvas>
+
+        <input class="petitionButton" type="submit" value="Submit" />
+    </form>
+
+</div>
+
+<script src="./public/js/script.js"></script>

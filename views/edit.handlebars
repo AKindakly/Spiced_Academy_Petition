@@ -1,0 +1,96 @@
+<div class="editBody">
+
+    <div class="editPara">
+        <h2>Edit your Profile!</h2>
+    </div>
+
+    <form class="editForm" action="/profile/edit" method="POST">
+
+        <div class="editInputs">
+            <label for="first_name">First name:</label>
+            <input
+                class="editInput"
+                name="first_name"
+                required
+                pattern="[^0-9]*"
+                title="First name cannot contains any digits"
+                value="{{first_name}}"
+            />
+        </div>
+
+        <div class="editInputs">
+            <label for="last_name">Last name:</label>
+            <input
+                class="editInput"
+                name="last_name"
+                required
+                pattern="[^0-9]*"
+                title="Last name cannot contains any digits"
+                value="{{last_name}}"
+            />
+        </div>
+
+        <div class="editInputs">
+            <label for="email">Email Address:</label>
+            <input
+                class="editInput"
+                name="email"
+                required
+                pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                title="Invalid email address"
+                value="{{email}}"
+            />
+        </div>
+
+        <div class="editInputs">
+            <label for="password">Password:</label>
+            <input
+                class="editInput"
+                type="password"
+                name="password"
+                placeholder="new password"
+            />
+        </div>
+
+        <div class="editInputs">
+            <label for="age">Age:</label>
+            <input
+                class="editInput"
+                name="age"
+                type="number"
+                min="1"
+                max="130"
+                value="{{age}}"
+            />
+        </div>
+
+        <div class="editInputs">
+            <label for="city">City:</label>
+            <input
+                class="editInput"
+                name="city"
+                pattern="[^0-9]*"
+                title="City cannot contains any digits"
+                value="{{city}}"
+            />
+        </div>
+
+        <div class="editInputs">
+            <label for="homepage">Homepage :</label>
+            <input
+                class="editInput"
+                name="homepage"
+                onkeyup="checkUR(this)"
+                value="{{homepage}}"
+            />
+            <script>function checkUR(abc){ string = abc.value
+                if(!(/^http:\/\//.test(string))){ string = "http://" + string; }
+                abc.value=string }</script>
+        </div>
+
+        <div class="editInputs">
+            <input class="editbutton" type="submit" value="submit" />
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,49 @@
+<div class="profileBody">
+
+    <div class="profilePara">
+        <h2>Now please tell us just a little bit more about yourself</h2>
+        <h3>This inputs are optional</h3>
+    </div>
+
+    <form class="profileForm" action="/profile" method="POST">
+
+        <div class="profileInputs">
+            <input
+                class="profileInput"
+                name="age"
+                type="number"
+                min="1"
+                max="130"
+                placeholder="Enter your Age"
+            />
+        </div>
+
+        <div class="profileInputs">
+            <input
+                class="profileInput"
+                name="city"
+                pattern="[^0-9]*"
+                title="City cannot contains any digits"
+                placeholder="Enter your City"
+            />
+        </div>
+
+        <div class="profileInputs">
+            <input
+                class="profileInput"
+                name="homepage"
+                placeholder="Enter your Homepage"
+                onkeyup="checkUR(this)"
+            />
+            <script>function checkUR(abc){ string = abc.value
+                if(!(/^http:\/\//.test(string))){ string = "http://" + string; }
+                abc.value=string }</script>
+
+        </div>
+
+        <div class="profileInputs">
+            <input class="profileButton" type="submit" value="submit" />
+        </div>
+
+    </form>
+</div>

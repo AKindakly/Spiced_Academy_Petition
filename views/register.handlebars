@@ -1,0 +1,58 @@
+<div class="registerBody">
+
+    <div class="registerPara">
+        <h2>We won't get there without your Support!<br />Please fill the inputs
+            to Register</h2>
+    </div>
+
+    <form class="registerForm" action="/register" method="POST">
+
+        <div class="registerInputs">
+            <input
+                class="registerInput"
+                name="first_name"
+                required
+                pattern="[^0-9]*"
+                title="First name cannot contains any digits"
+                placeholder="First Name"
+            />
+        </div>
+
+        <div class="registerInputs">
+            <input
+                class="registerInput"
+                name="last_name"
+                required
+                pattern="[^0-9]*"
+                title="Last name cannot contains any digits"
+                placeholder="Last Name"
+            />
+        </div>
+
+        <div class="registerInputs">
+            <input
+                class="registerInput"
+                name="email"
+                required
+                pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                title="Invalid email address"
+                placeholder="Email address"
+            />
+        </div>
+
+        <div class="registerInputs">
+            <input
+                class="registerInput"
+                type="password"
+                name="password"
+                required
+                placeholder="password"
+            />
+        </div>
+
+        <div class="registerInputs">
+            <input class="registerbutton" type="submit" value="Sign Up" />
+        </div>
+
+    </form>
+</div>

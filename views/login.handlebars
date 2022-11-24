@@ -1,0 +1,45 @@
+<div class="loginBody">
+
+    <div class="loginPara">
+        <h2>Thousands of Rhinos are being left to die every single year<br />due
+            to the Rhino horn trade.<br />
+            Let us all stand together to help Rhinos!</h2>
+        <h4>Please sign in to read more and also to sign this petition</h4>
+    </div>
+
+    <form class="loginForm" action="/login" method="POST">
+
+        <div class="loginInputs">
+            <input
+                class="loginInput"
+                name="email"
+                required
+                pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                title="Invalid email address"
+                placeholder="Email address"
+            />
+        </div>
+
+        <div class="loginInputs">
+            <input
+                class="loginInput"
+                type="password"
+                name="password"
+                required
+                placeholder="password"
+            />
+        </div>
+
+        <div class="loginInputs">
+            <input class="loginButton" type="submit" value="Sign in" />
+        </div>
+
+    </form>
+
+    <div class="loginRegister">
+        <p>Don't have an account yet?
+            <a class="goRegister" href="/register">
+                Create your account now</a></p>
+    </div>
+
+</div>
